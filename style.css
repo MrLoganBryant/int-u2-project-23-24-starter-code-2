@@ -18,14 +18,42 @@ h2 {
 
 /* The code below aligns all the sections horizontally on the bottom. */
 .section-container {
-    display:flex;
-    justify-content:space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 /* The code below a solid black border to section and puts space between them (the margin). */
 .section {
-    border: 5px black solid;
-    margin:5px;
+  width: 300px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.section:hover {
+  transform: scale(1.02);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section h3, .section p {
+  padding: 10px;
+  text-align: center;
 }
 /* Reset some default browser styles */
 * {
@@ -62,6 +90,7 @@ body {
 
 .nav-links a:hover {
     color: #ff9900;
+      text-decoration: underline;
 }
 
 .site-title {
